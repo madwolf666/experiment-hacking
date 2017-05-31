@@ -1,5 +1,4 @@
-import socks
-import socket
+import socket,socks,requests
 #import urllib
 import requests
 
@@ -8,8 +7,8 @@ class Tor:
         #プロキシの設定
         proxy_ip = '127.0.0.1'
         proxy_port = 9050
-        #socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, proxy_ip, proxy_port)
-        #socket.socket = socks.socksocket
+        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, proxy_ip, proxy_port)
+        socket.socket = socks.socksocket
         #urllib.socket.socket = socks.socksocket
 
     def get_ip(self):
