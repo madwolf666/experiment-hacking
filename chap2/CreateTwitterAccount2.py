@@ -4,6 +4,10 @@ from json import load
 import socket,socks,requests
 import random,sys,csv,time
 
+#インスタンス作成
+SESSION = requests.Session()
+AUTH_TOKEN = ""
+
 class TwitterCreateAccount:
     def __init__(self):
         #プロキシの設定
