@@ -29,7 +29,7 @@
         <entry key="argparse" value="1.3.0" />
         <entry key="asn1crypto" value="0.22.0" />
         <entry key="astroid" value="1.5.3" />
-        <entry key="astropy" value="1.3.3" />
+        <entry key="astropy" value="2.0" />
         <entry key="async-timeout" value="1.2.1" />
         <entry key="atom" value="0.3.10" />
         <entry key="attrs" value="15.2.0" />
@@ -97,7 +97,7 @@
         <entry key="comtypes" value="1.1.2" />
         <entry key="conda" value="4.3.22" />
         <entry key="conda-api" value="1.1.0" />
-        <entry key="conda-build" value="2.1.17" />
+        <entry key="conda-build" value="3.0.6" />
         <entry key="conda-build-all" value="1.0.2" />
         <entry key="conda-env" value="2.6.0" />
         <entry key="conda-manager" value="0.4.0" />
@@ -121,10 +121,11 @@
         <entry key="cssselect" value="1.0.1" />
         <entry key="csvkit" value="0.9.1" />
         <entry key="cubes" value="1.1" />
-        <entry key="cudatoolkit" value="7.5" />
+        <entry key="cudatoolkit" value="8.0" />
+        <entry key="cudnn" value="6.0" />
         <entry key="curl" value="7.54.1" />
         <entry key="cvxcanon" value="0.0.23.3" />
-        <entry key="cx_oracle" value="5.2" />
+        <entry key="cx_oracle" value="6.0b2" />
         <entry key="cycler" value="0.10.0" />
         <entry key="cython" value="0.25.2" />
         <entry key="cytoolz" value="0.8.2" />
@@ -147,7 +148,7 @@
         <entry key="ecos" value="2.0.4" />
         <entry key="enable" value="4.5.1" />
         <entry key="enaml" value="0.9.8" />
-        <entry key="entrypoints" value="0.2.2" />
+        <entry key="entrypoints" value="0.2.3" />
         <entry key="enum34" value="1.1.6" />
         <entry key="envisage" value="4.5.1" />
         <entry key="ephem" value="3.7.5.3" />
@@ -157,6 +158,7 @@
         <entry key="expressions" value="0.2.3" />
         <entry key="fabric" value="1.13.2" />
         <entry key="fastcache" value="1.0.2" />
+        <entry key="fastparquet" value="0.0.6" />
         <entry key="faulthandler" value="2.4" />
         <entry key="feedparser" value="5.2.1" />
         <entry key="filelock" value="2.0.7" />
@@ -207,6 +209,7 @@
         <entry key="graphviz" value="2.38.0" />
         <entry key="greenlet" value="0.4.12" />
         <entry key="grin" value="1.2.1" />
+        <entry key="gtest" value="1.8.0" />
         <entry key="h2o" value="3.10.0.9" />
         <entry key="h2o-py" value="3.10.0.9" />
         <entry key="h5py" value="2.7.0" />
@@ -264,6 +267,7 @@
         <entry key="launcher" value="1.0.0" />
         <entry key="lazy-object-proxy" value="1.3.1" />
         <entry key="ldap3" value="1.0.4" />
+        <entry key="leveldb" value="1.20" />
         <entry key="libconda" value="4.0.3" />
         <entry key="libdynd" value="0.7.2" />
         <entry key="libevent" value="2.0.21" />
@@ -284,7 +288,7 @@
         <entry key="libxgboost" value="0.60" />
         <entry key="line_profiler" value="2.0" />
         <entry key="llvm" value="3.3" />
-        <entry key="llvmlite" value="0.18.0" />
+        <entry key="llvmlite" value="0.19.0" />
         <entry key="llvmmath" value="0.1.2" />
         <entry key="llvmpy" value="0.12.7" />
         <entry key="lmdb" value="0.9.21" />
@@ -533,6 +537,7 @@
         <entry key="mathjax" value="2.2" />
         <entry key="matplotlib" value="2.0.2" />
         <entry key="matplotlib-tests" value="1.5.1" />
+        <entry key="maven" value="3.5.0" />
         <entry key="mayavi" value="4.5.0" />
         <entry key="mccabe" value="0.6.1" />
         <entry key="mdp" value="3.5" />
@@ -576,6 +581,7 @@
         <entry key="nbsetuptools" value="0.1.5" />
         <entry key="ndg-httpsclient" value="0.3.3" />
         <entry key="ndg_httpsclient" value="0.3.3" />
+        <entry key="neo4j-python-driver" value="1.3.1" />
         <entry key="netcdf4" value="1.2.4" />
         <entry key="networkx" value="1.11" />
         <entry key="ninja" value="1.7.2" />
@@ -583,15 +589,15 @@
         <entry key="node-webkit" value="0.10.1" />
         <entry key="nodejs" value="6.10.3" />
         <entry key="nose" value="1.3.7" />
-        <entry key="nose-parameterized" value="0.5.0" />
+        <entry key="nose-parameterized" value="0.6.0" />
         <entry key="nosexcover" value="1.0.11" />
         <entry key="notebook" value="5.0.0" />
         <entry key="nsis" value="3.01" />
-        <entry key="numba" value="0.33.0" />
+        <entry key="numba" value="0.34.0" />
         <entry key="numbapro" value="0.23.1" />
         <entry key="numbapro_cudalib" value="0.2" />
         <entry key="numexpr" value="2.6.2" />
-        <entry key="numpy" value="1.13.0" />
+        <entry key="numpy" value="1.13.1" />
         <entry key="numpydoc" value="0.6.0" />
         <entry key="odo" value="0.5.0" />
         <entry key="olefile" value="0.44" />
@@ -605,6 +611,7 @@
         <entry key="packaging" value="16.8" />
         <entry key="pandas" value="0.20.2" />
         <entry key="pandas-datareader" value="0.4.0" />
+        <entry key="pandas-profiling" value="1.4.0" />
         <entry key="pandasql" value="0.7.3" />
         <entry key="pandoc" value="1.19.2.1" />
         <entry key="pandocfilters" value="1.4.1" />
@@ -631,7 +638,7 @@
         <entry key="picklable-itertools" value="0.1.1" />
         <entry key="pickleshare" value="0.7.4" />
         <entry key="pil" value="1.1.7" />
-        <entry key="pillow" value="4.2.0" />
+        <entry key="pillow" value="4.2.1" />
         <entry key="pip" value="9.0.1" />
         <entry key="pivottablejs" value="2.7.0" />
         <entry key="pkgconfig" value="1.1.0" />
@@ -715,6 +722,7 @@
         <entry key="python-sybase" value="0.40" />
         <entry key="python-utils" value="2.1.0" />
         <entry key="pytz" value="2017.2" />
+        <entry key="pyutilib" value="5.5.1" />
         <entry key="pywavelets" value="0.5.2" />
         <entry key="pywget" value="2.2" />
         <entry key="pywin32" value="220" />
@@ -1067,13 +1075,14 @@
         <entry key="suds-jurko" value="0.6" />
         <entry key="svn" value="1.9.4" />
         <entry key="swig" value="3.0.10" />
-        <entry key="sympy" value="1.0" />
+        <entry key="sympy" value="1.1" />
         <entry key="tabpy-client" value="0.2" />
         <entry key="tabpy-server" value="0.2" />
         <entry key="tabulate" value="0.7.5" />
         <entry key="tblib" value="1.3.2" />
         <entry key="tempita" value="0.5.3" />
         <entry key="tensorflow" value="1.1.0" />
+        <entry key="tensorflow-gpu" value="1.1.0" />
         <entry key="teradata" value="15.10.0.20" />
         <entry key="termcolor" value="1.1.0" />
         <entry key="testpath" value="0.3.1" />
@@ -1514,6 +1523,7 @@
               <option value="1.3.1" />
               <option value="1.3.2" />
               <option value="1.3.3" />
+              <option value="2.0" />
             </list>
           </value>
         </entry>
@@ -2487,6 +2497,10 @@
               <option value="2.1.9" />
               <option value="2.1.16" />
               <option value="2.1.17" />
+              <option value="3.0.3" />
+              <option value="3.0.4" />
+              <option value="3.0.5" />
+              <option value="3.0.6" />
             </list>
           </value>
         </entry>
@@ -2750,6 +2764,14 @@
               <option value="5.5rc1" />
               <option value="6.0" />
               <option value="7.0" />
+              <option value="8.0" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cudnn">
+          <value>
+            <list>
+              <option value="6.0" />
             </list>
           </value>
         </entry>
@@ -2779,6 +2801,7 @@
             <list>
               <option value="5.1.2" />
               <option value="5.2" />
+              <option value="6.0b2" />
             </list>
           </value>
         </entry>
@@ -3106,6 +3129,7 @@
             <list>
               <option value="0.2" />
               <option value="0.2.2" />
+              <option value="0.2.3" />
             </list>
           </value>
         </entry>
@@ -3183,6 +3207,13 @@
           <value>
             <list>
               <option value="1.0.2" />
+            </list>
+          </value>
+        </entry>
+        <entry key="fastparquet">
+          <value>
+            <list>
+              <option value="0.0.6" />
             </list>
           </value>
         </entry>
@@ -3637,6 +3668,13 @@
           <value>
             <list>
               <option value="1.2.1" />
+            </list>
+          </value>
+        </entry>
+        <entry key="gtest">
+          <value>
+            <list>
+              <option value="1.8.0" />
             </list>
           </value>
         </entry>
@@ -4247,6 +4285,13 @@
             </list>
           </value>
         </entry>
+        <entry key="leveldb">
+          <value>
+            <list>
+              <option value="1.20" />
+            </list>
+          </value>
+        </entry>
         <entry key="libconda">
           <value>
             <list>
@@ -4435,6 +4480,7 @@
               <option value="0.7.0" />
               <option value="0.8.0" />
               <option value="0.9.0" />
+              <option value="0.19.0" />
             </list>
           </value>
         </entry>
@@ -6254,6 +6300,13 @@
             </list>
           </value>
         </entry>
+        <entry key="maven">
+          <value>
+            <list>
+              <option value="3.5.0" />
+            </list>
+          </value>
+        </entry>
         <entry key="mayavi">
           <value>
             <list>
@@ -6668,6 +6721,13 @@
             </list>
           </value>
         </entry>
+        <entry key="neo4j-python-driver">
+          <value>
+            <list>
+              <option value="1.3.1" />
+            </list>
+          </value>
+        </entry>
         <entry key="netcdf4">
           <value>
             <list>
@@ -6758,6 +6818,7 @@
           <value>
             <list>
               <option value="0.5.0" />
+              <option value="0.6.0" />
             </list>
           </value>
         </entry>
@@ -6845,6 +6906,7 @@
               <option value="0.8.0" />
               <option value="0.8.1" />
               <option value="0.9.0" />
+              <option value="0.34.0" />
             </list>
           </value>
         </entry>
@@ -6938,6 +7000,7 @@
               <option value="1.9.2" />
               <option value="1.9.3" />
               <option value="1.13.0" />
+              <option value="1.13.1" />
             </list>
           </value>
         </entry>
@@ -7089,6 +7152,13 @@
               <option value="0.2.0" />
               <option value="0.2.1" />
               <option value="0.4.0" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pandas-profiling">
+          <value>
+            <list>
+              <option value="1.4.0" />
             </list>
           </value>
         </entry>
@@ -7362,6 +7432,7 @@
               <option value="4.1.0" />
               <option value="4.1.1" />
               <option value="4.2.0" />
+              <option value="4.2.1" />
             </list>
           </value>
         </entry>
@@ -8219,6 +8290,13 @@
               <option value="2016.6.1" />
               <option value="2016.7" />
               <option value="2017.2" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pyutilib">
+          <value>
+            <list>
+              <option value="5.5.1" />
             </list>
           </value>
         </entry>
@@ -11317,6 +11395,7 @@
               <option value="0.7.6" />
               <option value="0.7.6.1" />
               <option value="1.0" />
+              <option value="1.1" />
             </list>
           </value>
         </entry>
@@ -11359,6 +11438,13 @@
           </value>
         </entry>
         <entry key="tensorflow">
+          <value>
+            <list>
+              <option value="1.1.0" />
+            </list>
+          </value>
+        </entry>
+        <entry key="tensorflow-gpu">
           <value>
             <list>
               <option value="1.1.0" />
@@ -12144,6 +12230,6 @@
     <option name="CONDA_CHANNELS">
       <set />
     </option>
-    <option name="LAST_TIME_CHECKED" value="1499411238518" />
+    <option name="LAST_TIME_CHECKED" value="1500440804693" />
   </component>
 </application>
